@@ -2,7 +2,7 @@
 
 const LaunchDetails = () => {
   return (
-    <div className="w-[100%] max-w-5xl px-16 py-6 pt-20 flex flex-col gap-10 pb-28">
+    <div className="w-[100%] max-w-5xl px-16 py-6 pt-20 mt-9 flex flex-col gap-10 pb-28">
       <div className="text-black text-md font-medium">
         Official Launch Details
       </div>

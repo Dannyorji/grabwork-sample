@@ -1,18 +1,24 @@
-import heroBackground from '../assets/heroBackground.png';
-import GooglePlayLogo from '../assets/GooglePlayLogo.png';
-import AppleLogo from '../assets/AppleLogo.png';
-import grabIcon from '../assets/grabIcon.png';
+import heroBackground from "../assets/heroBackground.png";
+import GooglePlayLogo from "../assets/GooglePlayLogo.png";
+import AppleLogo from "../assets/AppleLogo.png";
+// import grabIcon from "../assets/grabIcon.png";
 
 const Hero = ({ onGetEarlyAccessClick, onBecomeVendorClick }) => {
   return (
     <div
-      className=" h-screen md:h-screen text-center justify-center bg-cover bg-center text-[0.6rem] sm:text-[1rem] -mt-20 pt-15"
-      style={{ backgroundImage: `url(${heroBackground})` }}
+      className="text-center relative pl-4 pr-4 pb-10 pt-44 justify-center bg-cover bg-center text-[0.6rem] sm:text-[1rem] pt-15 max-w-md:p-4"
+      style={{
+        background: `url(${heroBackground})`,
+        backgroundPosition: `top`,
+        backgroundRepeat: `no-repeat`,
+        backgroundSize: `cover`,
+      }}
     >
-      <div className="relative w-full lg:flex items-center justify-center">
-        <div className="w-full md:pt-40 lg:pt-52 z-10 text-center text-black">
-          <h2 className="text-center justify-center text-black text-xl md:text-5xl py-2 font-semibold whitespace-nowrap">
-            Get Ready for GrabWork – Your Ultimate On- <br /> Demand Service App!
+      <div className="flex items-center justify-center">
+        <div className="text-center flex flex-col text-black">
+          <h2 className="text-center h1Header justify-center text-black py-2 font-semibold">
+            Get Ready for GrabWork – Your Ultimate On- <br /> Demand Service
+            App!
           </h2>
           <p className="text-sm md:text-lg mb-4">
             Sign up now for early access and exclusive updates
@@ -33,8 +39,8 @@ const Hero = ({ onGetEarlyAccessClick, onBecomeVendorClick }) => {
           </div>
         </div>
       </div>
-      <div className="relative w-full flex justify-end pr-6 mt-24">
-        <div className="flex items-center">
+      <div className="flex justify-end pr-6">
+        <div className="flex items-center mt-10 -mr-10">
           <a
             href="#"
             className="border border-black bg-black px-3 py-1 text-sm font-sm text-white inline-flex items-center hover:font-semibold hover:bg-black hover:text-rt-primary hover:border-black focus:ring-4 focus:outline-none rounded-full text-center mr-5"
@@ -44,18 +50,18 @@ const Hero = ({ onGetEarlyAccessClick, onBecomeVendorClick }) => {
           </a>
           <a
             href="#"
-            className="border border-black bg-black px-2 py-1 text-sm font-sm text-white inline-flex items-center hover:font-semibold hover:bg-black hover:text-rt-primary hover:border-black focus:ring-4 focus:outline-none rounded-full text-center mr-10"
+            className="border border-black bg-black px-2 py-1 text-sm font-sm text-white inline-flex items-center hover:font-semibold hover:bg-black hover:text-rt-primary hover:border-black focus:ring-4 focus:outline-none rounded-full text-center mr-10 sm:mr-8"
           >
             <img src={AppleLogo} alt="android" />
             Apple Store
           </a>
         </div>
       </div>
-      <div className="pl-80 -mt-20 ml-3.5">
+      {/* <div className="pl-80 -mt-20 ml-3.5">
         <div className="flex items-center w-12 h-3">
           <img src={grabIcon} alt="grab Logo" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

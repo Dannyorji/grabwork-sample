@@ -46,15 +46,15 @@ const EarlyAccessForm = () => {
   };
 
   return (
-    <div className="w-full p-10 bg-white rounded-lg">
-      <h2 className="text-2xl font-medium text-neutral-800 mb-4">
+    <div className="w-full max-w-4xl p-6 md:p-10 bg-white rounded-lg">
+      <h2 className="text-xl md:text-2xl font-medium text-neutral-800 mb-2 md:mb-4">
         Get Early Access!
       </h2>
-      <p className="text-lg font-normal text-neutral-800 mb-6">
+      <p className="text-base md:text-lg font-normal text-neutral-800 mb-4 md:mb-6">
         Sign-Up Section for Users
       </p>
       <form autoComplete="off" onSubmit={handleSubmit} className="space-y-4">
-        <div className="flex space-x-6">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
           <div className="flex-1">
             <label className="block text-sm font-normal text-stone-950">
               First Name:
@@ -63,7 +63,7 @@ const EarlyAccessForm = () => {
               type="text"
               onChange={(e) => setFirstName(e.target.value)}
               value={firstname}
-              className="w-[100%] h-[60px] px-4 bg-white rounded-md border border-black"
+              className="w-full px-4 py-2 bg-white rounded-md border border-black"
               placeholder="First Name"
             />
           </div>
@@ -75,12 +75,12 @@ const EarlyAccessForm = () => {
               type="text"
               onChange={(e) => setSurname(e.target.value)}
               value={surname}
-              className="w-[100%] h-[60px] px-4 bg-white rounded-md border border-black"
+              className="w-full px-4 py-2 bg-white rounded-md border border-black"
               placeholder="Surname"
             />
           </div>
         </div>
-        <div className="flex space-x-6">
+        <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
           <div className="flex-1">
             <label className="block text-sm font-normal text-stone-950">
               Job Preferences:
@@ -88,7 +88,7 @@ const EarlyAccessForm = () => {
             <select
               onChange={(e) => setJobPreference(e.target.value)}
               value={jobpreference}
-              className="w-[90%] h-[60px] px-4 bg-white rounded-md border border-black"
+              className="w-full px-4 py-2 bg-white rounded-md border border-black"
             >
               <option value="" disabled>
                 Job Preference
@@ -108,16 +108,19 @@ const EarlyAccessForm = () => {
               type="text"
               onChange={(e) => setPhoneNumber(e.target.value)}
               value={phonenumber}
-              className="w-[100%] h-[60px] px-4 bg-white rounded-md border border-black"
+              className="w-full px-4 py-2 bg-white rounded-md border border-black"
               placeholder="Phone Number"
             />
           </div>
         </div>
-        <div className="">
+        <div className="w-full">
+          <label className="block text-sm font-normal text-stone-950">
+            Location:
+          </label>
           <select
             onChange={(e) => setLocation(e.target.value)}
             value={location}
-            className="w-[44%] h-[60px] px-4 mt-3 bg-white rounded-md border border-black"
+            className="w-full md:w-[44%] px-4 py-2 mt-2 bg-white rounded-md border border-black"
           >
             <option value="" disabled>
               Location
@@ -129,7 +132,7 @@ const EarlyAccessForm = () => {
             ))}
           </select>
         </div>
-        <div>
+        <div className="w-full">
           <label className="block text-sm font-normal text-stone-950">
             Email Address:
           </label>
@@ -137,17 +140,19 @@ const EarlyAccessForm = () => {
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            className="w-[70%] h-[60px] px-4 bg-white rounded-md border border-black"
+            className="w-full md:w-[70%] px-4 py-2 bg-white rounded-md border border-black"
             placeholder="Email Address"
           />
         </div>
-        <button
-          type="submit"
-          className="w-[20%] h-12 px-2 bg-[#008000] text-white rounded-md mt-4"
-        >
-          Sign-up Now
-        </button>
-        <div className="text-[12px] font-light text-black mt-4">
+        <div className="flex justify-center md:justify-start">
+          <button
+            type="submit"
+            className="w-auto px-6 py-2 bg-[#008000] text-white rounded-md mt-4"
+          >
+            Sign-up Now
+          </button>
+        </div>
+        <div className="text-xs md:text-sm font-light text-black mt-4">
           <strong>Privacy Note:</strong> We respect your privacy and are
           committed to protecting your personal information. Your data will be
           used solely for the purpose of providing you with early access and

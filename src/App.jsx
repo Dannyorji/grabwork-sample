@@ -28,7 +28,7 @@ const App = () => {
         onBecomeVendorClick={toggleVendorRegistration}
       />
       <Info />
-      <div className="p-0 w-[530px]">
+      <div className="p-0">
         <Services
           onGetEarlyAccessClick={toggleEarlyAccess}
           onBecomeVendorClick={toggleVendorRegistration}
@@ -38,7 +38,7 @@ const App = () => {
       <div>
         <LaunchDetails />
       </div>
-      <div>
+      <div className="px-0">
         <Footer />
       </div>
       <div className="px-0">{/* Your main content goes here */}</div>

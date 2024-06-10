@@ -1,62 +1,54 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-};
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    padding-top: 4rem;
-    overflow-x: hidden; /* Prevent horizontal overflow */
-  }
-  
-  /* .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    color: #6c757d;
-  } */
-  
-  .btn {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #008000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    overflow: auto; /* Allow the overlay itself to be scrollable */
-  }
-  
-  .popup {
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200%;
-    max-width: 850px;
-    max-height: 95vh; /* Ensure the popup doesn't exceed the viewport height */
-    overflow-y: auto; /* Allow the content within the popup to be scrollable */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    scrollbar-width: none;
-  }
+  margin: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
 
-   form {
-    display: flex;
-    flex-direction: column;
-  }
+.btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow: auto; /* Allow the overlay itself to be scrollable */
+}
 
+.popup {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+  max-width: 850px;
+  max-height: 95vh; /* Ensure the popup doesn't exceed the viewport height */
+  overflow-y: auto; /* Allow the content within the popup to be scrollable */
+  scrollbar-width: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1Header {
+  font-size: clamp(3rem, 2vw, 6rem) !important;
+}

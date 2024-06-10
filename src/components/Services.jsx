@@ -1,8 +1,7 @@
 import { useState } from "react";
-// import grabIcon from "../assets/grabIcon.png";
 import servicesImg from "../assets/servicesimg.svg";
 
-const Services = ({onGetEarlyAccessClick, onBecomeVendorClick}) => {
+const Services = ({ onGetEarlyAccessClick, onBecomeVendorClick }) => {
   const [selectedService, setSelectedService] = useState("Artisan Services");
 
   const services = [
@@ -25,13 +24,16 @@ const Services = ({onGetEarlyAccessClick, onBecomeVendorClick}) => {
   ];
 
   return (
-    <div className="w-[200%] relative bg-white px-10 pb-12">
-      <div className="w-[60%] px-8 text-neutral-800 text-xl whitespace-nowrap font-medium">
+    <div className="relative bg-white px-4 md:px-10 pb-12">
+      <div className="w-full px-4 md:px-8 text-neutral-800 text-xl font-medium text-center md:text-left">
         GrabWork is here to simplify your life by connecting you with skilled
-        professionals for <br /> home repairs, food delivery, and transportation
-        – all in one app!
+        professionals for home repairs, food delivery, and transportation – all
+        in one app!
       </div>
-      <div className="py-2.5 px-8 absolute justify-start items-start gap-[40px] inline-flex">
+      <div className="flex justify-center mt-4 md:hidden">
+        <img className="max-w-full h-auto" src={servicesImg} alt="Services" />
+      </div>
+      <div className="py-2.5 px-4 md:px-8 justify-start items-start gap-4 md:gap-8 flex flex-wrap">
         {services.map((service) => (
           <div
             key={service.name}
@@ -52,39 +54,28 @@ const Services = ({onGetEarlyAccessClick, onBecomeVendorClick}) => {
           </div>
         ))}
       </div>
-      <div className="flex items-center mt-20">
-        <div className="flex-col justify-start gap-[60px] inline-flex w-[40%]">
-          <h2 className="w-[500px] px-8 text-black text-sm font-normal">
+      <div className="flex flex-col lg:flex-row items-start mt-10">
+        <div className="flex-col justify-start gap-2 w-full lg:w-1/2 px-4 md:px-8">
+          <h2 className="text-black text-sm font-normal mt-2">
             {services.find((service) => service.name === selectedService)?.text}
           </h2>
-          <div className="justify-start items-start gap-5 inline-flex px-8">
+          <div className="flex gap-5 mt-6">
             <a
               onClick={onGetEarlyAccessClick}
-              
               className="px-3 py-3 bg-[#008000] rounded-lg justify-center items-center gap-2.5 flex text-white text-sm cursor-pointer font-normal"
             >
               Get Early Access
             </a>
             <a
               onClick={onBecomeVendorClick}
-    
               className="px-3 py-3 rounded-lg border border-[#008000] justify-center items-center gap-2.5 flex text-[#008000] text-sm cursor-pointer font-normal"
             >
               Become a Vendor
             </a>
           </div>
         </div>
-        <div className="w-[100%]">
-          <img className="ml-16 pl-10" src={servicesImg} alt="" />
-          {/* <div className="w-[20.29px] h-[20.29px] flex ml-20 space-x-3 gap-40 rotate-[11.77deg] absolute top-44">
-            <img className="ml-24 top-3" src={grabIcon} alt="grablogo" />
-          </div>
-          <div className="w-[20.29px] h-[20.29px] flex ml-72 rotate-[11deg] absolute top-[220px]">
-            <img className="" src={grabIcon} alt="grablogo" />
-          </div>
-          <div className="w-[20.29px] h-[20.29px] absolute right-2 top-[296px] rotate-[20deg] mr-[67px]">
-            <img className="" src={grabIcon} alt="grablogo" />
-          </div> */}
+        <div className="hidden md:flex w-full lg:w-1/2 justify-center mt-10 lg:mt-0">
+          <img className="max-w-full h-auto" src={servicesImg} alt="Services" />
         </div>
       </div>
     </div>
