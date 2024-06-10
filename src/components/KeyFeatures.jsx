@@ -5,16 +5,16 @@ import { useState } from "react";
 function KeyFeatures() {
   const sliders = [
     {
-      src: "src/assets/firstframe-min.svg",
+      src: "src/assets/firstframe.svg",
     },
     {
-      src: "src/assets/secondframe-min.svg",
+      src: "src/assets/secondframe.svg",
     },
     {
-      src: "src/assets/thirdframe-min.svg",
+      src: "src/assets/thirdframe.svg",
     },
     {
-      src: "src/assets/fourthframe-min.svg",
+      src: "src/assets/fourthframe.svg",
     },
   ];
 
